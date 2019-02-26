@@ -11,3 +11,6 @@ import shelve
 # TODO: Search for specific words while looping and replacing
 # them with user input.
 # TODO: Print new text and save it to a new file.
+
+
+# TODO: Change project status to "finished".
