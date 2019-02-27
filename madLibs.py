@@ -18,9 +18,13 @@ print(splitted_text)
 # TODO: Search for specific words while looping and replacing.
 #   them with user input.
 for x in splitted_text :
+    print(x)
+    mltext.write(x)
     if x == 'ADJECTIVE':
         print('Enter an adjective:')
-        input
+mltext.close()
+mltext = open('new_text.txt')
+print(mltext.read())
         
     
 
