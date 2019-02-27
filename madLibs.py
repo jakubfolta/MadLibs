@@ -8,9 +8,9 @@ import shelve
 
 # Open text file to read and a new file to save new changed text.
 text_file = open('textfile.txt')
-text_file_r = text_file.read()
-splitted_text = text_file_r.split()
-print(text_file_r)
+file_content = text_file.read()
+splitted_text = file_content.split()
+print(file_content)
 print(splitted_text)
 mltext = open('new_text.txt', 'w')
 
