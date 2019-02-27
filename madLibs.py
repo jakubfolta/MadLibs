@@ -16,13 +16,17 @@ print(splitted_text)
 
 # TODO: Search for specific words while looping and replacing.
 # them with user input.
-for index, x in enumerate(splitted_text):
-    if x == splitted_text[len(splitted_text) - 1]:
+for x in splitted_text:
+    if x == splitted_text[len(splitted_text) - 1] and x not in ['ADJECTIVE', 'NOUN', 'ADVERB', 'VERB']:
         mltext.write(x)
     elif x == 'ADJECTIVE':
-        print('Enter an adjective:')
-        mltext.write(x.replace(x, input()))
-        print(x)
+        if x == splitted_text[len(splitted_text) - 1]:
+            print('Enter an adjective:')
+            mltext.write(x.replace(x, input()))
+        else:
+            print('Enter an adjective:')
+            mltext.write(x.replace(x, input() + ' '))
+            print(x)
     else:
         mltext.write(x + ' ')
 mltext.close()
