@@ -19,8 +19,21 @@ print(splitted_text)
 # them with user input.
 for index, x in enumerate(splitted_text):
     print(index)
-    if x.startswith(('ADJECTIVE', 'NOUN', 'ADVERB', 'VERB')) and not index == (len(splitted_text) - 1):
-        print()
+    if x.startswith(('ADJECTIVE', 'NOUN', 'ADVERB', 'VERB')):
+        if x == 'ADJECTIVE':
+            print('Enter an adjective:')
+            mltext.write(x.replace(x, input()), + ' ')
+        elif x == 'NOUN':
+            print('Enter a noun:')
+            mltext.write(x.replace(x, input()), + ' ')
+        elif x == 'ADVERB':
+            print('Enter an adverb:')
+            mltext.write(x.replace(x, input()), + ' ')
+        elif x == 'VERB':
+            print('Enter a verb:')
+            mltext.write(x.replace(x, input()), + ' ')
+        mltext.write(x + ' ')
+            
         mltext.write(x + ' ')
     elif x.startswith(('ADJECTIVE', 'NOUN', 'ADVERB', 'VERB')):
         mltext.write(x)
