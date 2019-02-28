@@ -9,6 +9,8 @@ import pyperclip
 text_file = open('textfile.txt')
 mltext = open('new_text.txt', 'w')
 file_content = text_file.read()
+print(file_content)
+
 # Split text file.
 splitted_text = file_content.split()
 print(file_content)
@@ -17,22 +19,21 @@ print(splitted_text)
 
 # TODO: Search for specific words while looping and replacing.
 # them with user input.
-for index, x in enumerate(splitted_text):
-    print(index)
+for x in file_content:
     if x.startswith('ADJECTIVE'):
         print('Enter an adjective:')
         mltext.write(x.replace(x, input() + ' '))
     elif x.startswith('NOUN'):
         print('Enter a noun:')
-        mltext.write(x.replace(x, input()), + ' ')
+        mltext.write(x.replace(x, input() + ' '))
     elif x.startswith('ADVERB'):
         print('Enter an adverb:')
-        mltext.write(x.replace(x, input()), + ' ')
+        mltext.write(x.replace(x, input() + ' '))
     elif x.startswith('VERB'):
         print('Enter a verb:')
-        mltext.write(x.replace(x, input()), + ' ')
+        mltext.write(x.replace(x, input() + ' '))
     else:
-        mltext.write(x + ' ')
+        mltext.write(x + ' ')'''
 
     
     
