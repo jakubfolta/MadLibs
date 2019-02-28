@@ -20,6 +20,7 @@ print(splitted_text)
 for index, x in enumerate(splitted_text):
     print(index)
     if x.startswith(('ADJECTIVE', 'NOUN', 'ADVERB', 'VERB')) and not index == (len(splitted_text) - 1):
+        print()
         mltext.write(x + ' ')
     elif x.startswith(('ADJECTIVE', 'NOUN', 'ADVERB', 'VERB')):
         mltext.write(x)
