@@ -6,14 +6,11 @@ import sys
 import pyperclip
 
 # Open text file to read and a new file to save new changed text.
-text_file = open('textfile.txt')
-mltext = open('new_text.txt', 'w')
-file_content = text_file.read()
-print(file_content)
-file_content.writefile_content.replace('ADJECTIVE', 'adadada')
-text_file.close()
+text_file = open('textfile.txt').read()
+mltext = open('new_text.txt', 'r+')
+file_content = text_file
+print(text_file)
 
-'''print(dir(file_content))
 # Split text file.
 splitted_text = file_content.split()
 print(file_content)
@@ -44,7 +41,7 @@ mltext.close()
 mltext = open('new_text.txt')
 print(mltext.read())
     
-    '''
+
 
 # TODO: Print new text and save it to a new file.
 
