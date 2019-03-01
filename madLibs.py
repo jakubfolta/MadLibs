@@ -12,15 +12,15 @@ file_content = text_file
 print(text_file)
 
 # Split text file.
-splitted_text = file_content.split()
+'''splitted_text = file_content.split()
 print(file_content)
-print(splitted_text)
+print(splitted_text)'''
 
 
 # TODO: Search for specific words while looping and replacing.
 # them with user input.
 for x in file_content:
-    if x.startswith('ADJECTIVE'):
+    if x in ('ADJECTIVE'):
         print('Enter an adjective:')
         mltext.write(x.replace(x, input() + ' '))
     elif x.startswith('NOUN'):
