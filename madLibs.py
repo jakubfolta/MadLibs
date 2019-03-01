@@ -10,7 +10,10 @@ text_file = open('textfile.txt')
 mltext = open('new_text.txt', 'w')
 file_content = text_file.read()
 print(file_content)
+file_content.writefile_content.replace('ADJECTIVE', 'adadada')
+text_file.close()
 
+'''print(dir(file_content))
 # Split text file.
 splitted_text = file_content.split()
 print(file_content)
@@ -33,7 +36,7 @@ for x in file_content:
         print('Enter a verb:')
         mltext.write(x.replace(x, input() + ' '))
     else:
-        mltext.write(x + ' ')'''
+        mltext.write(x + ' ')
 
     
     
@@ -41,7 +44,7 @@ mltext.close()
 mltext = open('new_text.txt')
 print(mltext.read())
     
-    
+    '''
 
 # TODO: Print new text and save it to a new file.
 
