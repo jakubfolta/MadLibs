@@ -8,7 +8,6 @@ import pyperclip
 # Open text file to read and a new file to save new changed text.
 text_file = open('textfile.txt')
 mltext = open('new_text.txt', 'r+')
-file_content = text_file.read()
 #print(file_content)
 
 # TODO: Search for specific words while looping and replacing.
@@ -16,7 +15,7 @@ file_content = text_file.read()
 for line in text_file:
     print(line)
     if 'ADJECTIVE' in line:
-        pass
+       mltext.write(line.replace('ADJECTIVE', input('Enter an adjective: ')))
     '''if x in ('ADJECTIVE'):
         print('Enter an adjective:')
         mltext.write(x.replace(x, input() + ''))
