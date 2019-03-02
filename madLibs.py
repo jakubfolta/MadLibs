@@ -6,16 +6,16 @@ import sys
 import pyperclip
 
 # Open text file to read and a new file to save new changed text.
-text_file = open('textfile.txt')
+text_file = open('textfile.txt', 'r+').read()
 mltext = open('new_text.txt', 'r+')
-#print(file_content)
+print(text_file)
+splitted_text = text_file.split()
+print(splitted_text)
 
 # TODO: Search for specific words while looping and replacing.
 # them with user input.
-for line in text_file:
-    print(line)
-    if 'ADJECTIVE' in line:
-       mltext.write(line.replace('ADJECTIVE', input('Enter an adjective: ')))
+for item in splitted_text:
+    print(item)
     '''if x in ('ADJECTIVE'):
         print('Enter an adjective:')
         mltext.write(x.replace(x, input() + ''))
