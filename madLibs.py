@@ -11,27 +11,25 @@ mltext = open('new_text.txt', 'r+')
 print(text_file)
 splitted_text = text_file.split()
 print(splitted_text)
-
 # TODO: Search for specific words while looping and replacing.
 # them with user input.
-for item in splitted_text:
-    print(item)
-    '''if x in ('ADJECTIVE'):
+for x in splitted_text:
+    if x.startswith('ADJECTIVE'):
         print('Enter an adjective:')
-        mltext.write(x.replace(x, input() + ''))
+        mltext.write(x.replace('ADJECTIVE', input() + ''))
     elif x.startswith('NOUN'):
         print('Enter a noun:')
-        mltext.write(x.replace(x, input() + ''))
+        mltext.write(x.replace('NOUN', input() + ''))
     elif x.startswith('ADVERB'):
         print('Enter an adverb:')
-        mltext.write(x.replace(x, input() + ''))
+        mltext.write(x.replace('ADVERB', input() + ''))
     elif x.startswith('VERB'):
         print('Enter a verb:')
-        mltext.write(x.replace(x, input() + ''))
+        mltext.write(x.replace('VERB', input() + ''))
     else:
         mltext.write(x + ' ')
 
-    '''
+    
     
 mltext.close()
 mltext = open('new_text.txt').read()
