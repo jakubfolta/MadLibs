@@ -12,12 +12,16 @@ print(text_file)
 splitted_text = text_file.split()
 print(splitted_text)
 '''
-newtext = 
+newtext = open('newtext.txt', 'r+')
 with open('textfile.txt') as newfile:
     textlist = [x for x in newfile.read().split()]
     print(textlist)
-    newstring = ' '.join(textlist)
-    print(newstring)
+newstring = ' '.join(textlist)
+print(newstring)
+newtext.write(newstring)
+newtext.close()
+newtext = open('newtext.txt').read()
+print(newtext)
     
 
 
