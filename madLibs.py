@@ -36,6 +36,11 @@ for x in splitted_text:
         
 mltext.close()
 
+with open('new_text.txt') as new_file:
+    new_list = [x.strip() for x in new_file.read().split()]
+    print(new_list)
+    mltext = open('new')
+
 
 # TODO: Print new text and save it to a new file.
 print(open('new_text.txt').read())
