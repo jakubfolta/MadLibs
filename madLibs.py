@@ -12,11 +12,13 @@ print(text_file)
 splitted_text = text_file.split()
 print(splitted_text)
 '''
-
+newtext = 
 with open('textfile.txt') as newfile:
     textlist = [x for x in newfile.read().split()]
     print(textlist)
-
+    newstring = ' '.join(textlist)
+    print(newstring)
+    
 
 
 '''# Search for specific words while looping, replace them with user input and save new text to a new file.
