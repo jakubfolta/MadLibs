@@ -26,24 +26,11 @@ for x in textlist:
         newtext.write(x + ' ')
 newtext.close()
 
+# Print new text and save it to a new file.
 with open('newtext.txt') as temp_file:
-    stripped_file = [x.strip() for x in temp_file.readlines()]
+    stripped_file = ''.join([x.strip() for x in temp_file.readlines()])
     print(stripped_file)
 with open('newtext.txt', 'w') as file:
     file.write(''.join(stripped_file))
 
-'''with open('newtext.txt') as nospace:
-    newtext = [line.strip() for line in nospace]
-    print(newtext)
-'''
-'''
-newtext = open('newtext.txt', 'r')
-nospace = newtext.read().strip()
-newtext.close()
 
-# Print new text and save it to a new file.
-print(nospace)
-newtext = open('newtext.txt', 'w')
-newtext.write(nospace)
-newtext.close()
-'''
