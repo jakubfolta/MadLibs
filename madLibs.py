@@ -15,10 +15,10 @@ print(splitted_text)
 with open('textfile.txt') as newfile:
     textlist = [x for x in newfile.read().split()]
     print(textlist)
-    newtext = open('newtext.txt', 'r+')
+    #newtext = open('newtext.txt', 'r+')
     for x in textlist:
         if x.startswith('ADJECTIVE'):
-            newtext.write(x.replace('ADJECTIVE', input('Enter an adjective: ')))
+            x[0:len('ADJECTIVE') - 1] = input('Enter an adjective: ')
 
 newtext.close()
 newtext = open('newtext.txt').read()
