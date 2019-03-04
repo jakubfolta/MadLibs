@@ -1,10 +1,7 @@
 #! python3
 
-#Mad Libs - A program which replace specified words with user inputs, save it to a new file and prints it to the console. 
+#Mad Libs - A program which replace specified words with user inputs, save it to a new file and prints it to the console.
 
-import re
-
-end_space_regex = re.compile(r'\.')
 # Open text file to read and a new file to save new changed text.
 with open('textfile.txt') as newfile:
     textlist = [x for x in newfile.read().split()]
