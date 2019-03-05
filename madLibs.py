@@ -13,30 +13,30 @@ newtext = open('newtext.txt', 'w')
 # Search for specific words while looping, replace them with user input and save new text to a new file.
 for x in textlist:
     if x.startswith('ADJECTIVE'):
-        newtext.write(x.replace('ADJECTIVE', input('Enter an adjective:')))
+        newtext.write(x.replace('ADJECTIVE', input('Enter an adjective: ')))
         newtext.write(' ')
     elif x.startswith('NOUN'):
-        newtext.write(x.replace('NOUN', input('Enter a noun:')))
+        newtext.write(x.replace('NOUN', input('Enter a noun: ')))
         newtext.write(' ')
     elif x.startswith('ADVERB'):
-        newtext.write(x.replace('ADVERB', input('Enter an adverb:')))
+        newtext.write(x.replace('ADVERB', input('Enter an adverb: ')))
         newtext.write(' ')
     elif x.startswith('VERB'):
-        newtext.write(x.replace('VERB', input('Enter a verb:')))
+        newtext.write(x.replace('VERB', input('Enter a verb: ')))
         newtext.write(' ')
     else:
         newtext.write(x + ' ')
 newtext.close()
 
 newtext = open('newtext.txt')
-stri = newtext.read()       # TODO: Write in one newtext.write()
+stri = newtext.read()       
 print(stri)
 stri = re.sub(r'\s+$', '', stri)
 newtext.close()
 print(stri)
-#newtext = open('newtext.txt')
-#newtext.write(str)
-#newtext.close()
+with open('newtext.txt', 'w') as newfile:
+    newfile.write(stri)
+    
 
 '''# Print new text and save it to a new file.
 with open('newtext.txt') as temp_file:
