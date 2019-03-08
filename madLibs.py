@@ -6,7 +6,7 @@ import re
 
 # Open text file to read and a new file to save new changed text.
 with open('textfile.txt') as newfile:
-    textlist = [x for x in newfile.read().split()]
+    textlist = newfile.read().split()
     print(textlist)
 newtext = open('newtext.txt', 'w')
 
