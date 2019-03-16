@@ -11,7 +11,7 @@ with open('textfile.txt') as textfile:
     splitted_text = textfile.read().split()
     print(splitted_text)
 
-# Open new file to save new text and use loop to exchange specified words.
+# Open new file to save new text and use for loop to exchange specified words.
 with open('changedtext.txt', 'w') as newtext:
     for x in splitted_text:
         for y in words:
@@ -22,9 +22,14 @@ with open('changedtext.txt', 'w') as newtext:
         else:
             newtext.write(x + ' ')
 
+# Remove space from the end of the text.
+with open('changedtext.txt') as newtext:
+    content = ' '.join(x.strip() for x in newtext.readlines())
+
+with open('changedtext.txt', 'w') as newtext:
+    newtext.write(content)
+
+# Print new text to the screen
 with open('changedtext.txt') as newtext:
     content = newtext.read()
     print(content)
-
-# TODO: Loop through the file and exchange specified words.
-# TODO: Save new changed text to a new file.
