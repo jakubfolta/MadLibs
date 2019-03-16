@@ -22,14 +22,11 @@ with open('changedtext.txt', 'w') as newtext:
         else:
             newtext.write(x + ' ')
 
-# Remove space from the end of the text.
+# Remove space from the end of the text and print new text to the screen.
 with open('changedtext.txt') as newtext:
     content = ' '.join(x.strip() for x in newtext.readlines())
+    print(content)
 
+# Save changed text without needless space at the end.
 with open('changedtext.txt', 'w') as newtext:
     newtext.write(content)
-
-# Print new text to the screen
-with open('changedtext.txt') as newtext:
-    content = newtext.read()
-    print(content)
