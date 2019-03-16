@@ -26,6 +26,7 @@ for x in textlist:
         newtext.write(x + ' ')
 newtext.close()
 
+# Another way to remove space at the end of text.
 '''newtext = open('newtext.txt')
 stri = newtext.read()
 print(stri)
@@ -38,7 +39,7 @@ with open('newtext.txt', 'w') as newfile:
 
 # Print new text and save it to a new file.
 with open('newtext.txt') as temp_file:
-    stripped_file = ''.join([x.strip() for x in temp_file.readlines()])
+    stripped_file = ' '.join(x.strip() for x in temp_file.readlines())
     print(stripped_file)
 with open('newtext.txt', 'w') as file:
     file.write(stripped_file)
