@@ -16,8 +16,14 @@ with open('changedtext.txt', 'w') as newtext:
     for x in splitted_text:
         for y in words:
             if x.startswith(y):
-                print('Found' + x + ' == ' + y )
-                word = input('Please enter ' + y.lower() + ':' )
+                word = input('Please enter ' + y.lower() + ':' + '\n')
+                newtext.write(x.replace(y, word) + ' ')
+            else:
+                pass
+
+with open('changedtext.txt') as newtext:
+    content = newtext.read()
+    print(content)
 
 # TODO: Loop through the file and exchange specified words.
 # TODO: Save new changed text to a new file.
