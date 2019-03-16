@@ -18,8 +18,9 @@ with open('changedtext.txt', 'w') as newtext:
             if x.startswith(y):
                 word = input('Please enter ' + y.lower() + ':' + '\n')
                 newtext.write(x.replace(y, word) + ' ')
-            else:
-                pass
+                break
+        else:
+            newtext.write(x + ' ')
 
 with open('changedtext.txt') as newtext:
     content = newtext.read()
